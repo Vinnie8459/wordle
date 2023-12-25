@@ -128,9 +128,8 @@ button:hover{
 }
 
 #err_container.end{
-    background-color: white;
-    opacity: 100%;
     pointer-events: none;
+    animation: appear-disappear 6s ease-in;
 }
 
 @keyframes appear-disappear {
