@@ -1,0 +1,222 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+
+
+body{
+    background-color: rgb(40, 40, 40);    
+}
+
+#everything{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#title_wordle{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    color: white;
+}
+
+hr{
+    border: 1px solid rgb(70, 70, 70);
+    width: 100%;
+}
+
+
+
+#guesses{
+    margin-top: 10px;
+}
+
+.guessrows{
+    margin: 3px;
+}
+
+.shake{
+    animation: horizontal-shake 0.5s;
+}
+
+input{
+    font-weight: 550;
+    font-size: 30px;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    margin: 1px;
+    border-radius: 2px;
+    background-color: rgb(40, 40, 40);
+    color: white;
+    box-shadow: none;
+    text-shadow: none;
+    border: 2px solid rgb(70, 70, 70);
+}
+
+input.filled{
+    border: 2px solid rgb(100, 100, 100);
+    animation: big-small 0.15s;
+}
+
+input.reveal-correct{
+    background-color: rgba(83,141,78,255);
+    border: none;
+    animation: flip-correct 0.4s ease-out;
+}
+
+input.reveal-incorrect{
+    background-color: rgb(35, 35, 35);
+    border: none;
+    animation: flip-incorrect 0.4s ease-out;
+}
+
+input.reveal-yellow{
+    background-color: rgba(181,159,59,255);
+    border: none;
+    animation: flip-yellow 0.4s ease-out;
+}
+
+
+#keyboard{
+    margin-top: 10px;
+}
+
+.keyrow{
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+button{
+    border-radius: 7px;
+    margin: 1px;
+    border: none;
+    width: 35px;
+    height: 50px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(136, 136, 136);
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#err_container{
+    background-color: rgba(255, 255, 255, 0.88);
+    width: fit-content;
+    border-radius: 5px;
+    position: absolute;
+    top: 120px;
+    opacity: 0%;
+}
+
+#err_container.brr{
+    animation: appear-disappear 1.5s ease-in;
+}
+
+#err_container.end{
+    background-color: white;
+    opacity: 100%;
+    pointer-events: none;
+}
+
+@keyframes appear-disappear {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes horizontal-shake {
+    0% { transform: translateX(0) }
+    14% { transform: translateX(5px) }
+    28% { transform: translateX(-5px) }
+    42% { transform: translateX(5px) }
+    56% { transform: translateX(-5px) }
+    70% { transform: translateX(5px) }
+    84% { transform: translateX(-5px) }
+    100% { transform: translateX(0) }
+   }
+
+@keyframes big-small {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+
+@keyframes flip-correct {
+    0% {transform: rotateX(180deg); background-color: rgb(40, 40, 40); border: none;}
+    50% {transform: rotateX(270deg); background-color: rgb(40, 40, 40); border: none;}
+    100% {transform: rotateX(360deg); background-color: rgba(83,141,78,255); border: none;}
+}
+
+@keyframes flip-incorrect {
+    0% {transform: rotateX(180deg); background-color: rgb(40, 40, 40); border: none;}
+    50% {transform: rotateX(270deg); background-color: rgb(40, 40, 40); border: none;}
+    100% {transform: rotateX(360deg); background-color: rgb(35, 35, 35); border: none;}
+}
+
+@keyframes flip-yellow {
+    0% {transform: rotateX(180deg); background-color: rgb(40, 40, 40); border: none;}
+    50% {transform: rotateX(270deg); background-color: rgb(40, 40, 40); border: none;}
+    100% {transform: rotateX(360deg); background-color: rgba(181,159,59,255); border: none;}
+}
+
+
+#err_msg{
+    text-align: center;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    padding: 14px 10px 14px 10px;
+    width: 100%;
+}
+
+.btn_spc{
+    width: 55px;
+    font-size: 12px;
+}
+
+.incorrect_letter {
+    background-color: rgb(35, 35, 35);
+    border: none;
+}
+
+.correct_letter {
+    background-color: rgba(83,141,78,255);
+    border: none;
+}
+
+.yellow_letter {
+    background-color: rgba(181,159,59,255);
+    border: none;
+}
+
+.correct_key {
+    background-color: rgba(83,141,78,255);
+}
+
+.incorrect_key {
+    background-color: rgb(35, 35, 35);
+}
+
+.yellow_key {
+    background-color: rgba(181,159,59,255);
+}
+
+

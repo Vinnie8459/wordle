@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="wordle.ico">
+        <script src="main.js"></script>
+        <title>Wordle</title>
+    </head>
+    <body>
+
+        
+        <div id="everything">
+            <p id="title_wordle">Wordle</p>
+
+            <hr>
+
+            
+
+            <div id="guesses">
+                <div id="row-1" class="guessrows">
+                    <input id="g00" disabled>
+                    <input id="g01" disabled>
+                    <input id="g02" disabled>
+                    <input id="g03" disabled>
+                    <input id="g04" disabled>
+                </div>
+                <div id="row-2" class="guessrows">
+                    <input id="g10" disabled>
+                    <input id="g11" disabled>
+                    <input id="g12" disabled>
+                    <input id="g13" disabled>
+                    <input id="g14" disabled>
+                </div>
+                <div id="row-3" class="guessrows">
+                    <input id="g20" disabled>
+                    <input id="g21" disabled>
+                    <input id="g22" disabled>
+                    <input id="g23" disabled>
+                    <input id="g24" disabled>
+                </div>
+                <div id="row-4" class="guessrows">
+                    <input id="g30" disabled>
+                    <input id="g31" disabled>
+                    <input id="g32" disabled>
+                    <input id="g33" disabled>
+                    <input id="g34" disabled>
+                </div>
+                <div id="row-5" class="guessrows">
+                    <input id="g40" disabled>
+                    <input id="g41" disabled>
+                    <input id="g42" disabled>
+                    <input id="g43" disabled>
+                    <input id="g44" disabled>
+                </div>
+                <div id="row-6" class="guessrows">
+                    <input id="g50" disabled>
+                    <input id="g51" disabled>
+                    <input id="g52" disabled>
+                    <input id="g53" disabled>
+                    <input id="g54" disabled>
+                </div>
+                
+            </div>
+
+            <div id="keyboard">
+                <div id="key-1" class="keyrow">
+                    <button id="key_q" onclick="add_letter('Q')">Q</button>
+                    <button id="key_w" onclick="add_letter('W')">W</button>
+                    <button id="key_e" onclick="add_letter('E')">E</button>
+                    <button id="key_r" onclick="add_letter('R')">R</button>
+                    <button id="key_t" onclick="add_letter('T')">T</button>
+                    <button id="key_y" onclick="add_letter('Y')">Y</button>
+                    <button id="key_u" onclick="add_letter('U')">U</button>
+                    <button id="key_i" onclick="add_letter('I')">I</button>
+                    <button id="key_o" onclick="add_letter('O')">O</button>
+                    <button id="key_p" onclick="add_letter('P')">P</button>
+                </div>
+                <div id="key-2" class="keyrow">
+                    <button id="key_a" onclick="add_letter('A')">A</button>
+                    <button id="key_s" onclick="add_letter('S')">S</button>
+                    <button id="key_d" onclick="add_letter('D')">D</button>
+                    <button id="key_f" onclick="add_letter('F')">F</button>
+                    <button id="key_g" onclick="add_letter('G')">G</button>
+                    <button id="key_h" onclick="add_letter('H')">H</button>
+                    <button id="key_j" onclick="add_letter('J')">J</button>
+                    <button id="key_k" onclick="add_letter('K')">K</button>
+                    <button id="key_l" onclick="add_letter('L')">L</button>
+                </div>
+                <div id="key-3" class="keyrow">
+                    <button id="key_enter" class="btn_spc" onclick="enter()">ENTER</button>
+                    <button id="key_z" onclick="add_letter('Z')">Z</button>
+                    <button id="key_x" onclick="add_letter('X')">X</button>
+                    <button id="key_c" onclick="add_letter('C')">C</button>
+                    <button id="key_v" onclick="add_letter('V')">V</button>
+                    <button id="key_b" onclick="add_letter('B')">B</button>
+                    <button id="key_n" onclick="add_letter('N')">N</button>
+                    <button id="key_m" onclick="add_letter('M')">M</button>
+                    <button id="key_back" class="btn_spc" onclick="backspace()">BACK</button>
+                </div>
+            </div>
+
+            <div id="err_container" tabindex="-1">
+                <p id="err_msg"></p>
+            </div>
+
+        </div>
+        
+        
+
+    </body>
+</html>
