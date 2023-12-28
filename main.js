@@ -54,7 +54,7 @@ document.onclick = function (ctx) {
 
 //Startup
 function startGame() {
-    console.log(current_word); //remove when finished
+    //console.log(current_word); //remove when finished
     gameRunning = true;
 }
 
