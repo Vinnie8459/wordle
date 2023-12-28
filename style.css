@@ -56,8 +56,8 @@ input{
     text-align: center;
     margin: 1px;
     border-radius: 2px;
-    background-color: rgb(40, 40, 40);
-    color: white;
+    background: rgb(40, 40, 40);
+    color: #ffffff;
     box-shadow: none;
     text-shadow: none;
     border: 2px solid rgb(70, 70, 70);
@@ -69,19 +69,19 @@ input.filled{
 }
 
 input.reveal-correct{
-    background-color: rgba(83,141,78,255);
+    background: rgba(83,141,78,255);
     border: none;
     animation: flip-correct 0.4s ease-out;
 }
 
 input.reveal-incorrect{
-    background-color: rgb(35, 35, 35);
+    background: rgb(35, 35, 35);
     border: none;
     animation: flip-incorrect 0.4s ease-out;
 }
 
 input.reveal-yellow{
-    background-color: rgba(181,159,59,255);
+    background: rgba(181,159,59,255);
     border: none;
     animation: flip-yellow 0.4s ease-out;
 }
