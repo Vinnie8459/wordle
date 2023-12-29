@@ -55,7 +55,7 @@ document.onclick = function (ctx) {
 //Startup
 function startGame() {
     //console.log(current_word); //remove when finished
-    console.log("v1.10.0");
+    console.log("v1.11.0");
     gameRunning = true;
 }
 
@@ -63,8 +63,8 @@ function restartGame() {
     for (i = 0; i <= guess; i++) {
         for (o = 0; o < 5; o++) {
             tile = document.getElementById("g" + i.toString() + o.toString());
-            tile.className = "";
-            tile.value = "";
+            tile.className = "inputguess";
+            tile.innerText = "";
         }
     }
 
@@ -94,8 +94,8 @@ function add_letter(value) {
     
     for (let i = 0; i <= 4; i++) {
         var tile = document.getElementById("g" + guess.toString() + i.toString());
-        if (!tile.value) {
-            tile.value = value;
+        if (!tile.innerText) {
+            tile.innerText = value;
             tile.classList.add('filled');
             break;
         }
@@ -107,8 +107,8 @@ function backspace() {
     
     for (let i = 4; i >= 0; i--) {
         var tile = document.getElementById("g" + guess.toString() + i.toString());
-        if (tile.value != '') {
-            tile.value = '';
+        if (tile.innerText != '') {
+            tile.innerText = '';
             tile.classList.remove('filled');
             break;
         }
@@ -117,7 +117,7 @@ function backspace() {
 
 function enter() {
     if (!gameRunning) { return; }
-    if (!document.getElementById("g" + guess.toString() + '4').value) {
+    if (!document.getElementById("g" + guess.toString() + '4').innerText) {
         var errorbox = document.getElementById('err_container');
         var hahaha = guess + 1;
         var guessrow = document.getElementById('row-' + hahaha.toString());
@@ -183,7 +183,7 @@ function checkGuess() {
 
     for (let i = 0; i <= 4; i++) {
         var tile = document.getElementById("g" + guess.toString() + i.toString());
-        guess_string = guess_string + tile.value.toLowerCase();
+        guess_string = guess_string + tile.innerText.toLowerCase();
     }
 
     if (!word_list.includes(guess_string)) {
@@ -220,15 +220,15 @@ function checkGuess() {
         setTimeout(function () {
             currenttile = allTiles[i];
             if (guess_arr[i] == word_arr[i]) {
-                currenttile.className = 'reveal-correct';
+                currenttile.className = 'inputguess reveal-correct';
             }
 
             else if (current_word.includes(guess_arr[i])) {
-                currenttile.className = 'reveal-yellow';
+                currenttile.className = 'inputguess reveal-yellow';
             }
 
             else {
-                currenttile.className = 'reveal-incorrect';
+                currenttile.className = 'inputguess reveal-incorrect';
             }
         }, delay*i)
         
@@ -261,4 +261,3 @@ function checkGuess() {
     
      
 }
-
