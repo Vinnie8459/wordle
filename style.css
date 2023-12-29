@@ -41,6 +41,7 @@ hr{
 }
 
 .guessrows{
+    display:flex;
     margin: 3px;
 }
 
@@ -48,7 +49,11 @@ hr{
     animation: horizontal-shake 0.5s;
 }
 
-input{
+.inputguess{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 550;
     font-size: 30px;
     width: 55px;
@@ -63,24 +68,24 @@ input{
     border: 2px solid rgb(70, 70, 70);
 }
 
-input.filled{
+.inputguess.filled{
     border: 2px solid rgb(100, 100, 100);
     animation: big-small 0.15s;
 }
 
-input.reveal-correct{
+.inputguess.reveal-correct{
     background: rgba(83,141,78,255);
     border: none;
     animation: flip-correct 0.4s ease-out;
 }
 
-input.reveal-incorrect{
+.inputguess.reveal-incorrect{
     background: rgb(35, 35, 35);
     border: none;
     animation: flip-incorrect 0.4s ease-out;
 }
 
-input.reveal-yellow{
+.inputguess.reveal-yellow{
     background: rgba(181,159,59,255);
     border: none;
     animation: flip-yellow 0.4s ease-out;
@@ -191,7 +196,7 @@ button:hover{
     width: 55px;
     font-size: 12px;
 }
-
+/* 
 .incorrect_letter {
     background-color: rgb(35, 35, 35);
     border: none;
@@ -205,7 +210,7 @@ button:hover{
 .yellow_letter {
     background-color: rgba(181,159,59,255);
     border: none;
-}
+} */
 
 .correct_key {
     background-color: rgba(83,141,78,255);
@@ -218,5 +223,4 @@ button:hover{
 .yellow_key {
     background-color: rgba(181,159,59,255);
 }
-
 
